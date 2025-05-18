@@ -11,17 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
         :root {
-            --primary: #2f5085;
-            --primary-light: #386ca1;
-            --primary-dark: #273067;
+            --primary: #2f855a;
+            --primary-light: #38a169;
+            --primary-dark: #276749;
             --secondary: #dd6b20;
             --secondary-light: #ed8936;
             --accent: #4299e1;
         }
         /* Redefined primary color for a softer look */
         :root {
-            --primary: #3854a1; /* Adjusted primary color */
-            --primary-light: #68aad3; /* Lighter shade */
+            --primary: #38a169; /* Adjusted primary color */
+            --primary-light: #68d391; /* Lighter shade */
             --gray: #4a5568; /* Darker gray for text */
             --light-gray: #edf2f7; /* Lighter gray for backgrounds */
         }
@@ -236,7 +236,7 @@
         }
 
         #farmVisualization {
-            background: linear-gradient(135deg, #6b8ee7dd 0%, #0f68b1 100%); /* Lighter gradient */
+            background: linear-gradient(135deg, #68d391 0%, #38a169 100%); /* Lighter gradient */
             border-radius: 12px; /* Match card radius */
             box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Add shadow */
         }
@@ -257,8 +257,8 @@
             left: 0;
             width: 18px;
             height: 18px;
-            background-color: #1074f6; /* Use primary color for trail */
-            border: 4px solid #4570fc; 
+            background-color: #10f687; /* Use primary color for trail */
+            border: 4px solid #50f58a; 
             border-radius: 50%;
             pointer-events: none; /* Important: Allows clicking through the trail */
             z-index: 9999; /* Ensure the trail is on top */
@@ -278,7 +278,7 @@
             width: 0;
             height: 0;
             background-color: #dcfaea;
-            border: 6px solid #0a9cfd; /* රවුමේ මායිම් වර්ණය සහ ඝනකම */
+            border: 6px solid #0afd67; /* රවුමේ මායිම් වර්ණය සහ ඝනකම */
             border-radius: 50%; /* රවුම් හැඩය */
             pointer-events: none; /* Click කිරීම වැළැක්වීම */
             z-index: 9999; /* අනෙකුත් අංග මතින් පෙන්වීමට */
@@ -295,7 +295,7 @@
             position: fixed;
             width: 8px; /* ප්‍රධාන cursor තිතේ ප්‍රමාණය */
             height: 8px; /* ප්‍රධාන cursor තිතේ ප්‍රමාණය */
-            background-color: #10c8f6; /* ප්‍රධාන cursor තිතේ වර්ණය (ඔබට අවශ්‍ය පරිදි වෙනස් කරන්න) */
+            background-color: #10f687; /* ප්‍රධාන cursor තිතේ වර්ණය (ඔබට අවශ්‍ය පරිදි වෙනස් කරන්න) */
             border-radius: 50%; /* රවුම් හැඩය */
             pointer-events: none; /* මෙය වැදගත්: අනෙකුත් elements මත hover සහ click කිරීමට ඉඩ සලසයි */
             z-index: 10000; /* Mouse trail සහ අනෙකුත් effects මතින් පෙන්වීමට (ඉතා ඉහළ අගයක්) */
@@ -306,13 +306,13 @@
 <body class="font-sans bg-gray-50">
   
 
-    <nav class="fixed w-full bg-white shadow-md z-40 bg-gradient-to-t from-blue-200 to-blue-50">
+    <nav class="fixed w-full bg-white shadow-md z-40 bg-gradient-to-t from-green-200 to-green-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center"> <div class="flex items-center">
                     <a href="#" class="flex-shrink-0 flex items-center">
-                        <img src="images/logo1.png" alt="App Logo" class="h-12 w-12 object-contain"> <span class="ml-2 text-2xl font-bold text-blue-800">AgriVisionPro</span> </a>
+                        <img src="images/logo1.png" alt="App Logo" class="h-12 w-12 object-contain"> <span class="ml-2 text-2xl font-bold text-green-800">AgriVisionPro</span> </a>
                 </div>
-                <div class="hidden md:ml-6 md:flex md:items-center text-blue-800 md:space-x-8">
+                <div class="hidden md:ml-6 md:flex md:items-center text-green-800 md:space-x-8">
                     <a href="#home" class="nav-link px-3 py-2">Home</a>
                     <a href="#crops" class="nav-link px-3 py-2">Crops</a>
                     <a href="#livestock" class="nav-link px-3 py-2">Livestock</a>
@@ -320,7 +320,7 @@
                     <a href="#resources" class="nav-link px-3 py-2">Resources</a>
                 </div>
                 <div class="-mr-2 flex items-center md:hidden">
-                    <button id="mobileMenuButton" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-700 hover:bg-gray-100 focus:outline-none" aria-label="Open mobile menu">
+                    <button id="mobileMenuButton" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-green-700 hover:bg-gray-100 focus:outline-none" aria-label="Open mobile menu">
                         <i class="fas fa-bars text-xl"></i> </button>
                 </div>
             </div>
@@ -328,22 +328,22 @@
 
         <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50">Home</a>
-                <a href="#crops" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50">Crops</a>
-                <a href="#livestock" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50">Livestock</a>
-                <a href="#market" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50">Market</a>
-                <a href="#resources" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-blue-700 hover:bg-gray-50">Resources</a>
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-700 hover:bg-gray-50">Home</a>
+                <a href="#crops" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-700 hover:bg-gray-50">Crops</a>
+                <a href="#livestock" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-700 hover:bg-gray-50">Livestock</a>
+                <a href="#market" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-700 hover:bg-gray-50">Market</a>
+                <a href="#resources" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-green-700 hover:bg-gray-50">Resources</a>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-800 to-blue-500 text-white overflow-hidden relative"> 
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-green-800 to-green-500 text-white overflow-hidden relative"> 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"> 
             <div class="md:flex md:items-center md:justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0 pr-8"> <h1 class="text-4xl md:text-5xl font-extrabold mb-6  text-white leading-tight">Smart Farming Solutions for Sri Lanka</h1> <p class="text-xl mb-8 opacity-90">Comprehensive guides for crop cultivation and livestock management ,tailored for local conditions.</p> <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#crops" class="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-center hover:bg-gray-100 transition transform hover:scale-105">Explore Crops <i class="fas fa-arrow-right ml-2"></i></a> <a href="#livestock" class="bg-blue-900 text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-blue-700 transition transform hover:scale-105">Explore Livestock <i class="fas fa-arrow-right ml-2"></i></a> </div>
+                        <a href="#crops" class="bg-white text-green-800 px-8 py-4 rounded-lg font-bold text-center hover:bg-gray-100 transition transform hover:scale-105">Explore Crops <i class="fas fa-arrow-right ml-2"></i></a> <a href="#livestock" class="bg-green-900 text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-green-700 transition transform hover:scale-105">Explore Livestock <i class="fas fa-arrow-right ml-2"></i></a> </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center items-center"> <div id="farmVisualization" class="h-80 md:h-96 w-full bg-gradient-to-r from-blue-800 to-blue-500 rounded-lg flex items-center justify-center p-6"> <div class="text-center text-white"> <i class="fas fa-tractor text-7xl mb-4 opacity-70"></i> <h3 class="text-3xl font-bold mb-2">Integrated Farm Management</h3> <p class="text-lg opacity-80">Visualize your agricultural success</p> </div>
+                <div class="md:w-1/2 flex justify-center items-center"> <div id="farmVisualization" class="h-80 md:h-96 w-full bg-gradient-to-r from-green-800 to-green-500 rounded-lg flex items-center justify-center p-6"> <div class="text-center text-white"> <i class="fas fa-tractor text-7xl mb-4 opacity-70"></i> <h3 class="text-3xl font-bold mb-2">Integrated Farm Management</h3> <p class="text-lg opacity-80">Visualize your agricultural success</p> </div>
                     </div>
                 </div>
             </div>
@@ -352,7 +352,7 @@
     </section>
 
     <section class="py-12 bg-white shadow-inner"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6"> <div class="bg-blue-100 p-6 rounded-lg text-center shadow-sm"> <div class="text-blue-700 text-4xl font-bold mb-2"><i class="fas fa-seedling"></i> 10+</div> <div class="text-gray-700 font-semibold">Crop Guides</div> </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6"> <div class="bg-green-100 p-6 rounded-lg text-center shadow-sm"> <div class="text-green-700 text-4xl font-bold mb-2"><i class="fas fa-seedling"></i> 10+</div> <div class="text-gray-700 font-semibold">Crop Guides</div> </div>
                 <div class="bg-yellow-100 p-6 rounded-lg text-center shadow-sm"> <div class="text-yellow-700 text-4xl font-bold mb-2"><i class="fas fa-paw"></i> 7</div> <div class="text-gray-700 font-semibold">Livestock Types</div> </div>
                 <div class="bg-blue-100 p-6 rounded-lg text-center shadow-sm"> <div class="text-blue-700 text-4xl font-bold mb-2"><i class="fas fa-language"></i> 2</div> <div class="text-gray-700 font-semibold">Languages</div> </div>
                 <div class="bg-purple-100 p-6 rounded-lg text-center shadow-sm"> <div class="text-purple-700 text-4xl font-bold mb-2"><i class="fas fa-clock"></i> 24/7</div> <div class="text-gray-700 font-semibold">Access</div> </div>
@@ -367,7 +367,7 @@
             </div>
 
             <div class="mb-8">
-                <div class="flex overflow-x-auto pb-2 scrollbar-hide"> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-blue-600 text-white shadow-md" data-crop="rice">Rice</button> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="maize">Maize</button> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="blue-gram">Green Gram</button>
+                <div class="flex overflow-x-auto pb-2 scrollbar-hide"> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-green-600 text-white shadow-md" data-crop="rice">Rice</button> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="maize">Maize</button> <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="green-gram">Green Gram</button>
                     <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="chili">Chili</button>
                     <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="onion">Onion</button>
                     <button class="crop-tab-btn flex-shrink-0 px-6 py-3 mr-3 rounded-lg font-semibold bg-white text-gray-700 hover:bg-gray-100 shadow-md" data-crop="tomato">Tomato</button>
@@ -379,23 +379,23 @@
 
             <div class="bg-white rounded-xl shadow-lg overflow-hidden"> <div class="p-8"> <div id="rice-content" class="tab-content active">
                         <div class="md:flex md:space-x-8"> <div class="md:w-1/3">
-                                <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Rice Cultivation</h3> <div class="flex items-center text-gray-700 mb-4"> <i class="fas fa-tint mr-2 text-blue-500"></i> <span class="mr-4"><strong>Water:</strong> 1200-1800 mm per season</span> </div>
+                                <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Rice Cultivation</h3> <div class="flex items-center text-gray-700 mb-4"> <i class="fas fa-tint mr-2 text-blue-500"></i> <span class="mr-4"><strong>Water:</strong> 1200-1800 mm per season</span> </div>
                                 <div class="flex items-center text-gray-700 mb-6"> <i class="fas fa-flask mr-2 text-yellow-600"></i> <span><strong>Fertilizer (N):</strong> 80-150 kg/ha</span> </div>
 
                                 <div class="mb-6">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200"> <p class="text-gray-700">Grown extensively across all climate zones (Wet, Intermediate, Dry). Two main cultivation seasons: <strong>Maha</strong> (Sept/Oct - Mar/Apr) and <strong>Yala</strong> (Apr/May - Aug/Sept).</p>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                    <div class="bg-green-50 p-4 rounded-lg border border-green-200"> <p class="text-gray-700">Grown extensively across all climate zones (Wet, Intermediate, Dry). Two main cultivation seasons: <strong>Maha</strong> (Sept/Oct - Mar/Apr) and <strong>Yala</strong> (Apr/May - Aug/Sept).</p>
                                     </div>
                                 </div>
 
                                 <div class="mb-6">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                     <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner"> <canvas id="riceTimelineChart"></canvas>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200"> <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4> <div class="space-y-4">
+                            <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200"> <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4> <div class="space-y-4">
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden"> <button class="accordion-btn">
                                             <span>1. Land Preparation</span>
                                             <i class="fas fa-chevron-down text-sm"></i> </button>
@@ -466,7 +466,7 @@
                                 </div>
 
                                 <div class="mt-8">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                     <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner"> <canvas id="riceWaterChart"></canvas>
                                     </div>
                                 </div>
@@ -477,7 +477,7 @@
                      <div id="maize-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Maize Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Maize Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 500-800 mm per season</span>
@@ -487,20 +487,20 @@
                                         <span><strong>Fertilizer (N):</strong> 80-120 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Best suited for Dry and Intermediate Zones. Grown in both <strong>Maha</strong> (Sept/Oct - Mar/Apr) and <strong>Yala</strong> (Apr/May - Aug/Sept) seasons. Requires warm conditions, sensitive to waterlogging and frost.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="maizeTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -567,7 +567,7 @@
                                     </div>
                                 </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="maizeWaterChart"></canvas>
                                         </div>
@@ -576,10 +576,10 @@
                             </div>
                         </div>
 
-                        <div id="blue-gram-content" class="tab-content">
+                        <div id="green-gram-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Green Gram Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Green Gram Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 300-500 mm per season</span>
@@ -589,20 +589,20 @@
                                         <span><strong>Fertilizer (N):</strong> 20-40 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Ideal for Dry and Intermediate Zones. Grown in <strong>Maha</strong> and <strong>Yala</strong> seasons, often as a short-term or rotation crop. Prefers warm, dry conditions; sensitive to excessive moisture during flowering and pod maturity.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
-                                            <canvas id="blueGramTimelineChart"></canvas>
+                                            <canvas id="greenGramTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -669,9 +669,9 @@
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
-                                            <canvas id="blueGramWaterChart"></canvas>
+                                            <canvas id="greenGramWaterChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -681,7 +681,7 @@
                         <div id="chili-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Chili Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Chili Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 500-700 mm per season</span>
@@ -691,20 +691,20 @@
                                         <span><strong>Fertilizer (N):</strong> 80-120 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Widely grown in Dry and Intermediate Zones. Cultivated in both <strong>Maha</strong> and <strong>Yala</strong> seasons; prefers dry conditions during flowering and fruiting to reduce disease. Requires warm temperatures; sensitive to frost and excessive humidity.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="chiliTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -775,12 +775,12 @@
                                                 <i class="fas fa-chevron-down text-sm"></i>
                                             </button>
                                             <div class="accordion-content">
-                                                <p class="text-gray-700">Pick mature blue or red chilies in multiple rounds over months.</p>
+                                                <p class="text-gray-700">Pick mature green or red chilies in multiple rounds over months.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="chiliWaterChart"></canvas>
                                         </div>
@@ -792,7 +792,7 @@
                         <div id="onion-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Onion Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Onion Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 400-600 mm per season</span>
@@ -802,20 +802,20 @@
                                         <span><strong>Fertilizer (N):</strong> 80-100 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Grown mainly in Dry and Intermediate Zones during <strong>Yala</strong> season (Apr/May - Aug/Sept). Prefers warm days and cooler nights; sensitive to excessive moisture during bulb formation.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="onionTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -882,7 +882,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="onionWaterChart"></canvas>
                                         </div>
@@ -894,7 +894,7 @@
                         <div id="tomato-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Tomato Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Tomato Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 400-600 mm per season</span>
@@ -904,20 +904,20 @@
                                         <span><strong>Fertilizer (N):</strong> 80-120 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Grown in all zones, primarily in Intermediate and Dry Zones during <strong>Maha</strong> season. Prefers warm days and cooler nights; sensitive to high humidity and frost. Wet Zone requires raised beds and disease management.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="tomatoTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -1011,7 +1011,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="tomatoWaterChart"></canvas>
                                         </div>
@@ -1023,7 +1023,7 @@
                         <div id="banana-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Banana Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Banana Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 1000-1500 mm annually</span>
@@ -1033,20 +1033,20 @@
                                         <span><strong>Fertilizer (N):</strong> 150-300 kg/ha annually</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Grown in all zones, with better yields in Wet and Intermediate Zones. Requires warm, humid conditions; sensitive to frost and prolonged dry spells. Year-round cultivation possible with irrigation.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="bananaTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -1126,12 +1126,12 @@
                                                 <i class="fas fa-chevron-down text-sm"></i>
                                             </button>
                                             <div class="accordion-content">
-                                                <p class="text-gray-700">Harvest bunches when fruits are well-filled but blue (8-15 months from planting).</p>
+                                                <p class="text-gray-700">Harvest bunches when fruits are well-filled but green (8-15 months from planting).</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="bananaWaterChart"></canvas>
                                         </div>
@@ -1143,7 +1143,7 @@
                         <div id="mango-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Mango Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Mango Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 800-1200 mm annually</span>
@@ -1153,20 +1153,20 @@
                                         <span><strong>Fertilizer (N):</strong> 200-500 g/tree/year</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Grown in all zones, with better flowering and fruiting in Dry and Intermediate Zones. Requires a distinct dry period (2-3 months) before flowering for good fruit set; high rainfall or humidity during flowering reduces yield. Prefers warm, frost-free conditions.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="mangoTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -1251,7 +1251,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="mangoWaterChart"></canvas>
                                         </div>
@@ -1263,7 +1263,7 @@
                         <div id="cabbage-content" class="tab-content">
                             <div class="md:flex md:space-x-8">
                                 <div class="md:w-1/3">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Cabbage Cultivation</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Cabbage Cultivation</h3>
                                     <div class="flex items-center text-gray-700 mb-4">
                                         <i class="fas fa-tint mr-2 text-blue-500"></i>
                                         <span class="mr-4"><strong>Water:</strong> 300-500 mm per season</span>
@@ -1273,20 +1273,20 @@
                                         <span><strong>Fertilizer (N):</strong> 80-150 kg/ha</span>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Climate Requirements</h4>
-                                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Climate Requirements</h4>
+                                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
                                             <p class="text-gray-700">Best suited for cooler climates in Upcountry and mid-country regions. Requires cool to moderate temperatures for head formation; high temperatures cause loose, poor-quality heads. Sensitive to heat and water stress; grown year-round in suitable microclimates.</p>
                                         </div>
                                     </div>
                                     <div class="mb-6">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Timeline</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Timeline</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="cabbageTimelineChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="md:w-2/3 md:pl-8 border-l pl-8 border-gray-200">
-                                    <h4 class="text-lg font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Cultivation Steps</h4>
+                                    <h4 class="text-lg font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Cultivation Steps</h4>
                                     <div class="space-y-4">
                                         <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                             <button class="accordion-btn">
@@ -1362,7 +1362,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-8">
-                                        <h4 class="text-lg font-semibold mb-3 text-blue-700">Water Requirements by Growth Stage</h4>
+                                        <h4 class="text-lg font-semibold mb-3 text-green-700">Water Requirements by Growth Stage</h4>
                                         <div class="h-64 bg-gray-50 p-4 rounded-lg shadow-inner">
                                             <canvas id="cabbageWaterChart"></canvas>
                                         </div>
@@ -1404,17 +1404,17 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Cattle Management</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Cattle Management</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-red-500"></i> <span><strong>Optimal Temp:</strong> 16-24°C</span> </div>
                                     <div class="requirements">
                                         <i class="fas fa-tint text-blue-500"></i> <span><strong>Water:</strong> 40-60L per day</span> </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4> <p class="text-gray-700">Found across all climate zones. Productivity affected by high temperatures and humidity. Heat stress can reduce milk yield and reproductive efficiency.</p>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4> <p class="text-gray-700">Found across all climate zones. Productivity affected by high temperatures and humidity. Heat stress can reduce milk yield and reproductive efficiency.</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Milk Production Factors</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Milk Production Factors</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner"> <canvas id="cattleChart"></canvas>
                                     </div>
                                 </div>
@@ -1422,7 +1422,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1434,7 +1434,7 @@
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">2. Feeding <i class="fas fa-chevron-down text-sm"></i></button>
                                         <div class="accordion-content">
-                                            <p class="text-gray-700">Provide a balanced diet of blue fodder (pasture, cultivated grasses, browse), hay/silage (especially in dry periods), and concentrate feeds based on age, physiological state (growth, lactation, pregnancy), and production level. Ensure access to clean water at all times.</p>
+                                            <p class="text-gray-700">Provide a balanced diet of green fodder (pasture, cultivated grasses, browse), hay/silage (especially in dry periods), and concentrate feeds based on age, physiological state (growth, lactation, pregnancy), and production level. Ensure access to clean water at all times.</p>
                                         </div>
                                     </div>
 
@@ -1467,7 +1467,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Poultry Management (Chickens, Ducks)</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Poultry Management (Chickens, Ducks)</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-red-500"></i>
                                         <span><strong>Optimal Temp:</strong> 18-24°C</span>
@@ -1477,12 +1477,12 @@
                                         <span><strong>Water:</strong> Fresh water constantly</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4>
                                     <p class="text-gray-700">High temperatures and humidity cause heat stress, leading to reduced feed intake, growth rate, egg production, and increased mortality. Rainy seasons increase humidity and disease risk.</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Egg Production Factors</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Egg Production Factors</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner">
                                         <canvas id="poultryChart"></canvas>
                                     </div>
@@ -1491,7 +1491,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1536,7 +1536,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Buffaloes Management</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Buffaloes Management</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-orange-500"></i> <span><strong>Heat Tolerance:</strong> More tolerant than cattle</span>
                                     </div>
@@ -1545,12 +1545,12 @@
                                         <span><strong>Requirement:</strong> Wallowing areas essential</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4>
                                     <p class="text-gray-700">Common in Dry and Intermediate Zones. Benefit from wallowing areas (mud/water) to regulate body temperature. Need dry resting areas during rains. Green fodder availability fluctuates with seasons.</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Milk Composition</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Milk Composition</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner">
                                         <canvas id="buffaloesChart"></canvas>
                                     </div>
@@ -1559,7 +1559,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1604,7 +1604,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Sheep Management</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Sheep Management</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-orange-500"></i>
                                         <span><strong>Tolerance:</strong> Tolerant to semi-arid conditions</span>
@@ -1613,12 +1613,12 @@
                                         <i class="fas fa-tint text-red-500"></i> <span><strong>Avoid:</strong> Excessive wetness</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4>
                                     <p class="text-gray-700">More common in drier areas (Dry and Intermediate Zones). Excessive wetness and humidity can lead to foot rot and internal parasite issues. Seasonal availability of pasture is a major factor.</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Wool/Fiber Quality</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Wool/Fiber Quality</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner">
                                         <canvas id="sheepChart"></canvas>
                                     </div>
@@ -1627,7 +1627,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1672,7 +1672,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Pigs Management</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Pigs Management</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-red-500"></i>
                                         <span><strong>Sensitivity:</strong> Highly susceptible to heat stress</span>
@@ -1682,12 +1682,12 @@
                                         <span><strong>Requirement:</strong> Wallowing/cooling systems needed</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4>
                                     <p class="text-gray-700">Require careful temperature management. Cannot sweat effectively - need cool housing, wallowing areas, or cooling systems (misters, fans) in warm weather. Housing must protect from direct sun and rain.</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Growth Rate Factors</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Growth Rate Factors</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner">
                                         <canvas id="pigsChart"></canvas>
                                     </div>
@@ -1696,7 +1696,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1741,7 +1741,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Goats Management</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Goats Management</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-orange-500"></i>
                                         <span><strong>Tolerance:</strong> Tolerant to hot, dry conditions</span>
@@ -1751,12 +1751,12 @@
                                         <span><strong>Sensitivity:</strong> Sensitive to prolonged wetness</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">Climate Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">Climate Considerations</h4>
                                     <p class="text-gray-700">Widely adapted across all zones, particularly drier regions. Prefer Browse to grazing. Sensitive to prolonged wet and cold conditions (can lead to pneumonia and foot problems).</p>
                                 </div>
 
                                 <div class="card">
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700">Milk/Meat Production</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700">Milk/Meat Production</h4>
                                     <div class="chart-container bg-gray-50 shadow-inner">
                                         <canvas id="goatsChart"></canvas>
                                     </div>
@@ -1765,7 +1765,7 @@
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1810,7 +1810,7 @@
                         <div class="flex-container">
                             <div class="left-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Other Livestock (Rabbits, Ducks, Turkeys)</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Other Livestock (Rabbits, Ducks, Turkeys)</h3>
                                     <div class="requirements">
                                         <i class="fas fa-temperature-high text-gray-500"></i>
                                         <span><strong>Requirement:</strong> Varies by species</span>
@@ -1820,14 +1820,14 @@
                                         <span><strong>Action:</strong> Research specific needs</span>
                                     </div>
 
-                                    <h4 class="text-lg font-semibold mb-3 text-blue-700 mt-6">General Considerations</h4>
+                                    <h4 class="text-lg font-semibold mb-3 text-green-700 mt-6">General Considerations</h4>
                                     <p class="text-gray-700">Requirements vary significantly by species. Protection from extreme temperatures, rain, and wind is necessary. Adequate ventilation important in all climates. Seasonal changes impact feed availability and disease prevalence.</p>
                                 </div>
                             </div>
 
                             <div class="right-panel">
                                 <div class="card">
-                                    <h3 class="text-2xl font-bold text-blue-800 mb-4 border-b pb-2 border-blue-200">Management Aspects</h3>
+                                    <h3 class="text-2xl font-bold text-green-800 mb-4 border-b pb-2 border-green-200">Management Aspects</h3>
 
                                     <div class="accordion border border-gray-200 rounded-lg overflow-hidden">
                                         <button class="accordion-btn">1. Housing <i class="fas fa-chevron-down text-sm"></i></button>
@@ -1879,7 +1879,7 @@
             </div>
 
             <div class="bg-white rounded-xl shadow-lg p-8"> <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Today's Market Prices</h3> <div class="overflow-x-auto">
+                    <h3 class="text-xl font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Today's Market Prices</h3> <div class="overflow-x-auto">
                         <table class="min-w-full divide-y divide-gray-200">
                             <thead class="bg-gray-100">
                                 <tr>
@@ -1890,7 +1890,7 @@
                                     <td class="px-6 py-4 whitespace-nowrap">kg</td>
                                     <td class="px-6 py-4 whitespace-nowrap">210.00</td>
                                     <td class="px-6 py-4 whitespace-nowrap">230.00</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-blue-600"><i class="fas fa-arrow-up"></i> 2.5%</td> </tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-green-600"><i class="fas fa-arrow-up"></i> 2.5%</td> </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">Tomatoes</td>
                                     <td class="px-6 py-4 whitespace-nowrap">kg</td>
@@ -1908,14 +1908,14 @@
                                     <td class="px-6 py-4 whitespace-nowrap">unit</td>
                                     <td class="px-6 py-4 whitespace-nowrap">30.00</td>
                                     <td class="px-6 py-4 whitespace-nowrap">100.00</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-blue-600"><i class="fas fa-arrow-up"></i> 1.8%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-green-600"><i class="fas fa-arrow-up"></i> 1.8%</td>
                                 </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap">Milk (Fresh)</td>
                                     <td class="px-6 py-4 whitespace-nowrap">liter</td>
                                     <td class="px-6 py-4 whitespace-nowrap">350.00</td>
                                     <td class="px-6 py-4 whitespace-nowrap">600.00</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-blue-600"><i class="fas fa-arrow-up"></i> 1.2%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-green-600"><i class="fas fa-arrow-up"></i> 1.2%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1923,7 +1923,7 @@
                 </div>
 
                 <div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-700 border-b pb-2 border-blue-200">Price Trends (Last 30 Days)</h3> <div id="priceTrendChart" class="h-96 bg-gray-50 p-4 rounded-lg shadow-inner"> </div>
+                    <h3 class="text-xl font-semibold mb-4 text-green-700 border-b pb-2 border-green-200">Price Trends (Last 30 Days)</h3> <div id="priceTrendChart" class="h-96 bg-gray-50 p-4 rounded-lg shadow-inner"> </div>
                 </div>
             </div>
         </div>
@@ -1937,19 +1937,19 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-blue-50 rounded-xl p-6 shadow-md card-hover border-t-4 border-blue-600"> <div class="text-blue-700 mb-4"> <i class="fas fa-landmark text-4xl"></i>
+                <div class="bg-green-50 rounded-xl p-6 shadow-md card-hover border-t-4 border-green-600"> <div class="text-green-700 mb-4"> <i class="fas fa-landmark text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-4 text-blue-800">Government Institutions</h3> <ul class="space-y-3">
+                    <h3 class="text-xl font-semibold mb-4 text-green-800">Government Institutions</h3> <ul class="space-y-3">
                         <li>
-                            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-blue-500 text-sm"></i> <span>Department of Agriculture</span>
+                            <a href="#" class="text-gray-700 hover:text-green-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-green-500 text-sm"></i> <span>Department of Agriculture</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-blue-500 text-sm"></i> <span>Department of Animal Production & Health</span>
+                            <a href="#" class="text-gray-700 hover:text-green-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-green-500 text-sm"></i> <span>Department of Animal Production & Health</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="text-gray-700 hover:text-blue-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-blue-500 text-sm"></i> <span>Agrarian Services</span>
+                            <a href="#" class="text-gray-700 hover:text-green-600 flex items-start footer-link-hover"> <i class="fas fa-chevron-right mt-1 mr-2 text-green-500 text-sm"></i> <span>Agrarian Services</span>
                             </a>
                         </li>
                     </ul>
@@ -1994,14 +1994,14 @@
 
             <div class="mt-12 bg-light-gray rounded-xl shadow-inner p-6 border-t-4 border-gray-300"> <h3 class="text-2xl font-semibold mb-6 text-gray-800">Frequently Asked Questions</h3>
                 <div class="space-y-4">
-                    <div class="border-b border-gray-300 pb-4"> <button class="faq-question flex justify-between items-center w-full text-left font-medium text-blue-800 hover:text-blue-600"> <span>What is the best time to plant paddy in Sri Lanka?</span>
+                    <div class="border-b border-gray-300 pb-4"> <button class="faq-question flex justify-between items-center w-full text-left font-medium text-green-800 hover:text-green-600"> <span>What is the best time to plant paddy in Sri Lanka?</span>
                             <i class="fas fa-chevron-down text-sm"></i> </button>
                         <div class="faq-answer mt-2 text-gray-700 hidden"> The optimal time for paddy cultivation depends on the region and season. In the Maha season (October-February), planting is typically done in October-November, while in the Yala season (April-August), planting is done in April-May.
                         </div>
                     </div>
 
                     <div class="border-b border-gray-300 pb-4">
-                        <button class="faq-question flex justify-between items-center w-full text-left font-medium text-blue-800 hover:text-blue-600">
+                        <button class="faq-question flex justify-between items-center w-full text-left font-medium text-green-800 hover:text-green-600">
                             <span>How can I prevent heat stress in my dairy cattle?</span>
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
@@ -2011,7 +2011,7 @@
                     </div>
 
                     <div class="border-b border-gray-300 pb-4">
-                        <button class="faq-question flex justify-between items-center w-full text-left font-medium text-blue-800 hover:text-blue-600">
+                        <button class="faq-question flex justify-between items-center w-full text-left font-medium text-green-800 hover:text-green-600">
                             <span>What are the vaccination requirements for poultry?</span>
                             <i class="fas fa-chevron-down text-sm"></i>
                         </button>
@@ -2024,35 +2024,35 @@
         </div>
     </section>
 
-    <footer class="bg-gradient-to-t from-blue-900 to-blue-600 text-white py-12"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-gradient-to-t from-green-900 to-green-600 text-white py-12"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-blue-100">AgriVisionPro</h3> <p class="mb-4 text-blue-100 opacity-80">Empowering Sri Lankan farmers with knowledge and technology for sustainable agriculture.</p> <div class="flex space-x-4 text-blue-400"> <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a> </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-100">AgriVisionPro</h3> <p class="mb-4 text-green-100 opacity-80">Empowering Sri Lankan farmers with knowledge and technology for sustainable agriculture.</p> <div class="flex space-x-4 text-green-400"> <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-youtube"></i></a> <a href="#" class="hover:text-white transition"><i class="fab fa-whatsapp"></i></a> </div>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-4 text-blue-100">Quick Links</h4> <ul class="space-y-2 text-blue-200 "> <li><a href="#home" class="hover:text-white transition nav-link px-3 py-2">Home</a></li> <li><a href="#crops" class="hover:text-white transition nav-link px-3 py-2">Crop Guide</a></li> <li><a href="#livestock" class="hover:text-white transition nav-link px-3 py-2">Livestock Guide</a></li> <li><a href="#market" class="hover:text-white transition nav-link px-3 py-2">Market Prices</a></li> </ul>
+                    <h4 class="font-semibold mb-4 text-green-100">Quick Links</h4> <ul class="space-y-2 text-green-200 "> <li><a href="#home" class="hover:text-white transition nav-link px-3 py-2">Home</a></li> <li><a href="#crops" class="hover:text-white transition nav-link px-3 py-2">Crop Guide</a></li> <li><a href="#livestock" class="hover:text-white transition nav-link px-3 py-2">Livestock Guide</a></li> <li><a href="#market" class="hover:text-white transition nav-link px-3 py-2">Market Prices</a></li> </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-4 text-blue-100">Resources</h4> <ul class="space-y-2 text-blue-200"> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Government Services</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Financial Support</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Publications</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">FAQs</a></li> </ul>
+                    <h4 class="font-semibold mb-4 text-green-100">Resources</h4> <ul class="space-y-2 text-green-200"> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Government Services</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Financial Support</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">Publications</a></li> <li><a href="#" class="hover:text-white transition nav-link px-3 py-2">FAQs</a></li> </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-semibold mb-4 text-blue-100">Contact Us</h4> <ul class="space-y-2 text-blue-200"> <li class="flex items-start">
-                            <i class="fas fa-envelope mt-1 mr-2 text-blue-200"></i> <span>info@agrivisionpro.lk</span>
+                    <h4 class="font-semibold mb-4 text-green-100">Contact Us</h4> <ul class="space-y-2 text-green-200"> <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2 text-green-200"></i> <span>info@agrivisionpro.lk</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-phone-alt mt-1 mr-2 text-blue-200"></i> <span>+94 11 234 5678</span>
+                            <i class="fas fa-phone-alt mt-1 mr-2 text-green-200"></i> <span>+94 11 234 5678</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-blue-200"></i> <span>123 Agriculture Road, Colombo, Sri Lanka</span>
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-green-200"></i> <span>123 Agriculture Road, Colombo, Sri Lanka</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-blue-500 mt-8 pt-8 text-sm text-center text-blue-300"> <p>&copy; 2025 AgriVisionPro. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Use</a></p> </div>
+            <div class="border-t border-green-500 mt-8 pt-8 text-sm text-center text-green-300"> <p>&copy; 2025 AgriVisionPro. All rights reserved. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Terms of Use</a></p> </div>
         </div>
     </footer>
 
@@ -2199,11 +2199,11 @@
 
                     // Update active tab button
                     cropTabButtons.forEach(btn => {
-                        btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                        btn.classList.remove('bg-green-600', 'text-white', 'shadow-md');
                         btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100', 'shadow-md'); {/* Adjusted classes */}
                     });
                     this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100'); {/* Adjusted classes */}
-                    this.classList.add('bg-blue-600', 'text-white');
+                    this.classList.add('bg-green-600', 'text-white');
 
                     // Show selected content
                     cropContents.forEach(content => {
@@ -2227,12 +2227,12 @@
                     // Update active tab button
                     livestockTabButtons.forEach(btn => {
                         btn.classList.remove('active');
-                         btn.classList.remove('bg-blue-600', 'text-white'); {/* Ensure previous active styling is removed */}
+                         btn.classList.remove('bg-green-600', 'text-white'); {/* Ensure previous active styling is removed */}
                          btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100'); {/* Add default styling */}
                     });
                     this.classList.add('active');
                      this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100'); {/* Remove default styling */}
-                     this.classList.add('bg-blue-600', 'text-white'); {/* Add active styling */}
+                     this.classList.add('bg-green-600', 'text-white'); {/* Add active styling */}
 
                     // Show selected content
                     livestockContents.forEach(content => {
@@ -2399,9 +2399,9 @@
                          label: 'Days',
                          data: [7, 2, 3, 45, 30, 7],
                          backgroundColor: [
-                             'rgba(52, 211, 164, 0.8)', /* Tailwind blue-400 */
-                             'rgba(110, 231, 183, 0.8)', /* Tailwind blue-300 */
-                             'rgba(16, 185, 129, 0.8)', /* Tailwind blue-500 */
+                             'rgba(52, 211, 164, 0.8)', /* Tailwind green-400 */
+                             'rgba(110, 231, 183, 0.8)', /* Tailwind green-300 */
+                             'rgba(16, 185, 129, 0.8)', /* Tailwind green-500 */
                              'rgba(52, 211, 164, 0.8)',
                              'rgba(16, 185, 129, 0.8)',
                              'rgba(20, 184, 166, 0.8)'  /* Tailwind teal-400 */
@@ -2441,7 +2441,7 @@
                      datasets: [{
                          label: 'Water Depth (cm)',
                          data: [5, 2, 5, 10, 5, 0],
-                         borderColor: '#38a169', /* Tailwind blue-600 */
+                         borderColor: '#38a169', /* Tailwind green-600 */
                          backgroundColor: 'rgba(56, 161, 105, 0.1)',
                          tension: 0.4, /* Increased tension for smoother line */
                          fill: true,
@@ -2543,7 +2543,7 @@
              });
 
              // Green Gram Charts
-             initializeChart('blueGramTimelineChart', {
+             initializeChart('greenGramTimelineChart', {
                  type: 'bar',
                  data: {
                      labels: ['Land Prep', 'Sowing', 'Vegetative', 'Flowering', 'Pod Filling', 'Harvest'],
@@ -2551,8 +2551,8 @@
                          label: 'Days',
                          data: [5, 2, 25, 10, 15, 3],
                          backgroundColor: [
-                              'rgba(56, 161, 105, 0.8)', /* Tailwind blue-600 */
-                              'rgba(93, 180, 136, 0.8)', /* Slightly lighter blue */
+                              'rgba(56, 161, 105, 0.8)', /* Tailwind green-600 */
+                              'rgba(93, 180, 136, 0.8)', /* Slightly lighter green */
                               'rgba(56, 161, 105, 0.8)',
                               'rgba(93, 180, 136, 0.8)',
                               'rgba(56, 161, 105, 0.8)',
@@ -2586,14 +2586,14 @@
                  }
              });
 
-             initializeChart('blueGramWaterChart', {
+             initializeChart('greenGramWaterChart', {
                  type: 'line',
                  data: {
                      labels: ['Land Prep', 'Sowing', 'Vegetative', 'Flowering', 'Pod Filling', 'Harvest'],
                      datasets: [{
                          label: 'Water Requirement (mm)',
                          data: [30, 20, 60, 80, 100, 10],
-                         borderColor: '#48bb78', /* Tailwind blue-500 */
+                         borderColor: '#48bb78', /* Tailwind green-500 */
                          backgroundColor: 'rgba(72, 187, 120, 0.1)',
                          tension: 0.4,
                          fill: true,
@@ -2935,8 +2935,8 @@
                          label: 'Months',
                          data: [1, 1, 12, 2, 3, 1],
                          backgroundColor: [
-                             'rgba(16, 185, 129, 0.8)', /* Tailwind blue-500 */
-                             'rgba(56, 161, 105, 0.8)', /* Tailwind blue-600 */
+                             'rgba(16, 185, 129, 0.8)', /* Tailwind green-500 */
+                             'rgba(56, 161, 105, 0.8)', /* Tailwind green-600 */
                              'rgba(16, 185, 129, 0.8)',
                              'rgba(56, 161, 105, 0.8)',
                              'rgba(16, 185, 129, 0.8)',
@@ -2977,7 +2977,7 @@
                      datasets: [{
                          label: 'Water Requirement (mm)',
                          data: [100, 120, 150, 100, 80, 120, 150, 100],
-                         borderColor: '#38a169', /* Tailwind blue-600 */
+                         borderColor: '#38a169', /* Tailwind green-600 */
                          backgroundColor: 'rgba(56, 161, 105, 0.1)',
                          tension: 0.4,
                          fill: true,
@@ -3011,7 +3011,7 @@
                          label: 'Days',
                          data: [7, 30, 3, 40, 30, 10],
                          backgroundColor: [
-                             'rgba(72, 187, 120, 0.8)', /* Tailwind blue-500 */
+                             'rgba(72, 187, 120, 0.8)', /* Tailwind green-500 */
                              'rgba(106, 211, 156, 0.8)',
                              'rgba(72, 187, 120, 0.8)',
                              'rgba(106, 211, 156, 0.8)',
@@ -3053,7 +3053,7 @@
                      datasets: [{
                          label: 'Water Requirement (mm)',
                          data: [30, 40, 30, 70, 90, 20],
-                         borderColor: '#48bb78', /* Tailwind blue-500 */
+                         borderColor: '#48bb78', /* Tailwind green-500 */
                          backgroundColor: 'rgba(72, 187, 120, 0.1)',
                          tension: 0.4,
                          fill: true,
@@ -3105,7 +3105,7 @@
                          datasets: [{
                              label: 'Impact on Milk Production',
                              data: [85, 90, 80, 75, 70],
-                             backgroundColor: 'rgba(56, 161, 105, 0.8)', /* Tailwind blue-600 */
+                             backgroundColor: 'rgba(56, 161, 105, 0.8)', /* Tailwind green-600 */
                              borderColor: '#38a169',
                              pointBackgroundColor: '#38a169',
                              pointBorderColor: '#fff',
